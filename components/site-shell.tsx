@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowDownRight, ArrowRight, ArrowUpRight, Instagram, MapPin, Phone, Sparkles } from 'lucide-react';
+import { ArrowDownRight, ArrowRight, ArrowUpRight, Instagram, MapPin, MessageCircle, Phone, Sparkles } from 'lucide-react';
 import { academy, admissionsMessage, navigation, primaryMessage, whatsappUrl } from '@/lib/site-data';
 import { MobileMenu, WhatsAppLink } from '@/components/interactions';
 
@@ -41,7 +41,7 @@ export function SiteFooter() {
         <div className="footer-brand-col">
           <BrandMark inverse />
           <p>Clear guidance, focused practice, and a little more confidence for the road ahead.</p>
-          <div className="footer-socials"><a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={17} /></a><WhatsAppLink ariaLabel="WhatsApp Ilmora Academy" message={primaryMessage}><span className="wa-small">◔</span></WhatsAppLink></div>
+          <div className="footer-socials"><a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={17} /></a><WhatsAppLink ariaLabel="WhatsApp Ilmora Academy" message={primaryMessage}><MessageCircle size={17} /></WhatsAppLink></div>
         </div>
         <div className="footer-links-col"><p className="footer-eyebrow">Discover</p>{navigation.slice(1, 5).map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}<Link href="/contact/">Contact</Link></div>
         <div className="footer-links-col"><p className="footer-eyebrow">Find your way</p><span><MapPin size={15} />{academy.city}</span><span><Phone size={15} />{academy.phoneDisplay}</span><Link href="/location/">View location <ArrowUpRight size={13} /></Link></div>
